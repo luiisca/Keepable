@@ -1,0 +1,62 @@
+/* filled state*/
+.note-card {
+  background-color: var(--md-sys-color-surface-variant);
+  /* color: var(--md-sys-color-on-surface-variant); */
+  color: #202124;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 9px; /* 12dp */
+  overflow: hidden;
+  padding-bottom: 4px;
+
+  position: relative;
+}
+
+.note-card .button--floating-top {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+}
+.button--floating-top .material-icons-outlined {
+  font-size: 2.4rem; 
+}
+
+.note-card:hover {
+  /* color: var(--md-sys-color-on-surface-light); */
+  box-shadow: 0px 1px 2px 0px var(--md-sys-color-shadow);
+}
+
+.note-card__img-cont {
+  height: 150px;
+  overflow: hidden;
+}
+
+.note-card__content {
+  padding: 1.2rem 1.6rem;
+}
+
+.input {
+  border: none;
+  font-weight: 400;
+  color: var(--gray-300);
+}
+
+.task__due {
+  border-radius: 9px;
+  padding: 0.4rem 0.8rem;
+  line-height: 1.6rem;
+  background-color: var(--gray-200);
+}
+.task__icon {
+  height: 25px;
+  width: 25px;
+}
+
+.note-card__buttons {
+  display: flex;
+  gap: 0.4rem;
+
+  margin: 4px;
+  margin-bottom: 0;
+}

@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Noto+Sans&family=Playfair+Display:ital,wght@0,600;0,700;1,700&display=swap');
+@import url("../design-tokens/variables.css");
 
-@import url("global/colors.css");
 @import url("global/layout.css");
 @import url("global/positioning.css");
 @import url("global/reset.css");
@@ -9,12 +8,11 @@
 
 @import url("common.blocks/button/button.css");
 @import url("blocks/lists/lists.css");
-@import url("blocks/tasks/tasks.css");
-@import url("blocks/tasks/tasks.css");
 
 @import url("blocks/nav-rail.css");
+@import url("blocks/button.css");
 
-@import url("blocks/task-card/task-card.css");
+@import url("blocks/note-card.css");
 
 .heading {
   font-family: 'Playfair Display', serif;
