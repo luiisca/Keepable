@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&family=Noto+Sans&family=Playfair+Display:ital,wght@0,600;0,700;1,700&display=swap');
+
+@import url("global/colors.css");
+@import url("global/layout.css");
+@import url("global/positioning.css");
+@import url("global/reset.css");
+@import url("global/typography.css");
+@import url("global/visuals.css");
+
+@import url("common.blocks/button/button.css");
+@import url("blocks/lists/lists.css");
+@import url("blocks/tasks/tasks.css");
+@import url("blocks/tasks/tasks.css");
+@import url("blocks/task-card/task-card.css");
+
+.heading {
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background-color: rgb(218, 240, 250);
+  background: linear-gradient(
+    153deg,
+    rgba(218, 240, 250, 1) 0%,
+    rgba(217, 229, 241, 1) 9%,
+    rgba(235, 236, 239, 1) 30%
+  );
+}
+.app {
+  display: flex;
+  gap: 15.8rem;
+  align-items: flex-start;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray-500);
+}

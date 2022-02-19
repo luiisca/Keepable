@@ -1,0 +1,67 @@
+.todo-lists {
+  height: 98vh;
+  top: 10px;
+  position: sticky;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 4.8rem;
+  margin: .8rem;
+
+  flex-basis: 25%;
+}
+
+.list-item {
+  padding: 1.6rem 2.4rem;
+  padding-right: 1.6rem;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-item--active {
+  background-color: var(--gray-100);
+}
+.list-item--active .counter-box {
+  background-color: var(--gray-200);
+  color: var(--gray-400);
+}
+
+
+.list__icon {
+  width: 1.6rem;
+}
+.list__title {
+  display: inline-block;
+}
+.counter-box {
+  border-radius: 9px;
+  color: var(--gray-300);
+  background-color: var(--gray-100);
+  padding: .4rem .8rem;
+}
+
+/* new task button */
+.list__new-task {
+  padding: 1.6rem 2.4rem;
+  padding-right: 1.6rem;
+
+  width: 100%;
+  background-color: var(--white);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.6rem 1fr auto;
+}
+.list__new-task-icon {
+  /* padding-left: 2.4rem; */
+}
+.command-container {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  gap: .8rem;
+}
+.command__icon {
+  height: 100%;
+}

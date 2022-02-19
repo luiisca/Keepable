@@ -1,0 +1,22 @@
+.tasks {
+  padding: 4.8rem;
+  align-items: center;
+  grid-template-columns: 40px minmax(auto, 600px);
+  grid-template-areas: 
+    'icon task'
+    'icon task'
+    'icon task';
+  grid-auto-flow: row;
+  gap: .8rem;
+  column-gap: 3.2rem;
+}
+
+.tasks__icon {
+  grid-area: icon;
+  align-self: flex-start;
+}
+
+.tasks__day {
+  font-weight: 400;
+  letter-spacing: .75px;
+}

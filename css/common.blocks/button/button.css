@@ -1,0 +1,37 @@
+@import url("../../common.blocks/button/--size/button--size.css");
+@import url("../../common.blocks/button/--type/button--type.css");
+
+.button,
+.button:link,
+.button:visited {
+  width: fit-content;
+
+  font-weight: 500;
+  /* letter-spacing: 1.25px; */
+
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+
+  text-align: left;
+}
+
+/* MODIFIERS */
+.button--form,
+.button--form:link,
+.button--form:visited {
+  justify-content: center;
+  width: 100%;
+}
+
+.button--current-page,
+.button--current-page:link,
+.button--current-page:visited {
+  color: var(--primary-600);
+}
+
+.button-base {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
