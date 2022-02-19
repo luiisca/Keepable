@@ -1,12 +1,12 @@
-const domHandler = function() {
-  console.log('first');
-  const parent = document.querySelector('#root');
-  console.log(parent);
+function domHandler(parentSelector) {
+  const parent = document.querySelector(parentSelector);
 
-  if (!parent) console.error('#root not found');
+  if (!parent) console.error(`${parentSelector} not found`);
 
-  return function load(component) {
-    parent.innerHTML = component.template;
-    component.addListeners();
+  return {
+    render(component) {
+      parent.innerHTML = component;
+      component.addListeners();
+    }
   }
 }

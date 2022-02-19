@@ -1,4 +1,5 @@
-'use strict';
+const App = domHandler("#root");
+App.render(Layout);
 
-const render = domHandler();
-render(Header);
+const Main = domHandler(".js-main");
+Main.render(NotesView);

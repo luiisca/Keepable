@@ -11,6 +11,9 @@
 @import url("blocks/lists/lists.css");
 @import url("blocks/tasks/tasks.css");
 @import url("blocks/tasks/tasks.css");
+
+@import url("blocks/nav-rail.css");
+
 @import url("blocks/task-card/task-card.css");
 
 .heading {

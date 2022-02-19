@@ -13,7 +13,9 @@ const Header = (function () {
   `;
 
   return {
+    toString() {
+      return template;
+    },
     addListeners() {},
-    template,
   };
 })();
