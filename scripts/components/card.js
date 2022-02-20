@@ -16,15 +16,15 @@ const Card = (function () {
     </div>
 
     <div class="note-card__buttons">
-      <button class="button">
+      <button class="button button--small">
         <span class="material-icons-outlined">palette</span>
       </button>
 
-      <button class="button">
+      <button class="button button--small">
         <span class="material-icons-outlined">image</span>
       </button>
 
-      <button class="button">
+      <button class="button button--small">
         <span class="material-icons-outlined">delete</span>
       </button>
     </div>

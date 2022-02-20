@@ -67,3 +67,10 @@ select {
 :focus {
   outline: 0;
 }
+
+/* Remove buttons default styling */
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}

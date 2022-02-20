@@ -12,16 +12,7 @@
   position: relative;
 }
 
-.note-card .button--floating-top {
-  position: absolute;
-  padding: 8px;
-  top: 12px;
-  right: 12px;
-  z-index: 1;
-}
-
 .note-card:hover {
-  /* color: var(--md-sys-color-on-surface-light); */
   box-shadow: 0px 1px 2px 0px var(--md-sys-color-shadow);
 }
 
@@ -34,34 +25,10 @@
   padding: 1.2rem 1.6rem;
 }
 
-.input {
-  border: none;
-  font-weight: 400;
-  color: var(--gray-300);
-}
-
-.task__due {
-  border-radius: 9px;
-  padding: 0.4rem 0.8rem;
-  line-height: 1.6rem;
-  background-color: var(--gray-200);
-}
-.task__icon {
-  height: 25px;
-  width: 25px;
-}
-
 .note-card__buttons {
   display: flex;
   gap: 0.4rem;
 
   margin: 4px;
   margin-bottom: 0;
-}
-.note-card__buttons .button {
-  padding: 8px;
-}
-
-.note-card__buttons .material-icons-outlined {
-  font-size: 2rem;
 }

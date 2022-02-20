@@ -12,8 +12,9 @@
 
 @import url("blocks/nav-rail.css");
 @import url("blocks/button.css");
-
+@import url("blocks/note-form.css");
 @import url("blocks/note-card.css");
+
 
 body {
   background-color: #fffbfa

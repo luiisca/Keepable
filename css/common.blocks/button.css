@@ -5,10 +5,7 @@
   justify-content: center;
 
   border: 1px solid transparent;
-  background-color: transparent;
 
-  text-decoration: none;
-  cursor: pointer;
   transition: all 0.3s;
 
   opacity: 0.81;
@@ -21,4 +18,41 @@
 }
 .button:focus {
   border: 1px solid rgba(0,0,0,0.6);
+}
+
+
+.button--small {
+  padding: 8px;
+}
+
+.button--small .material-icons-outlined {
+  font-size: 2rem;
+}
+
+
+/* close button */
+
+.button--type--close {
+  color: var(--md-sys-color-primary);
+  padding: .8rem 2.4rem;
+  border-radius: 4px;
+}
+
+.button--type--close:hover {
+  background-color: rgba(95,99,104,0.039);
+}
+.button--type--close:active {
+  background-color: rgba(95,99,104,0.161);
+}
+.button--type--close:focus {
+  background-color: rgba(95,99,104,0.122);
+}
+
+/* floating button */
+.button--floating-top {
+  position: absolute;
+  padding: 8px;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
 }
