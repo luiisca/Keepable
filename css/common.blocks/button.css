@@ -13,12 +13,12 @@
   cursor: pointer;
   transition: all 0.3s;
 
-  color: #202124;
-  opacity: 0.71;
+  opacity: 0.81;
+  color: #2e3637;
 }
 
 .button:hover {
-  opacity: 0.87;
+  opacity: 0.97;
   background-color: rgba(95, 99, 104, 0.157);
 }
 .button:focus {
@@ -28,4 +28,3 @@
 .button .material-icons-outlined {
   font-size: 1.8rem;
 }
-

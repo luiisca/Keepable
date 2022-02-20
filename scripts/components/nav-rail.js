@@ -1,21 +1,23 @@
 const NavRail = (function () {
   const template = `
-  <section class="section">
-    <aside class="nav-rail">
-      <a href="#" class="nav-rail__lnk nav-rail__notes" data-current=true>
-        <span class="material-icons-outlined">
+  <aside class="nav-rail">
+    <a href="#" class="nav-rail__lnk nav-rail__lnk--active nav-rail__notes" data-current=true>
+      <button class="nav-rail__button button">
+        <span class="nav-rail__icon material-icons-outlined">
           book
         </span>
-        <p>Notes</p>
-      </a>
-      <a href="#" class="nav-rail__lnk nav-rail__trash" data-current=false>
-        <span class="material-icons-outlined">
+      </button>
+      <p class="nav-rail__label font-title font-title--small">Notes</p>
+    </a>
+    <a href="#" class="nav-rail__lnk nav-rail__trash" data-current=false>
+      <button class="nav-rail__button button">
+        <span class="nav-rail__icon material-icons-outlined">
           delete
-          </span>          
-        <p>Trash</p>
-      </a>
-    </aside>
-  </section>
+        </span>
+      </button>         
+      <p class="font-title font-title--small">Trash</p>
+    </a>
+  </aside>
   `;
 
   const listenRailLink = function () {

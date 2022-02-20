@@ -6,8 +6,8 @@
 @import url("global/typography.css");
 @import url("global/visuals.css");
 
-@import url("common.blocks/button/button.css");
-@import url("blocks/lists/lists.css");
+@import url("common.blocks/button.css");
+@import url("common.blocks/nav-rail.css");
 
 @import url("blocks/nav-rail.css");
 @import url("blocks/button.css");
@@ -18,15 +18,6 @@
   font-family: 'Playfair Display', serif;
 }
 
-body {
-  background-color: rgb(218, 240, 250);
-  background: linear-gradient(
-    153deg,
-    rgba(218, 240, 250, 1) 0%,
-    rgba(217, 229, 241, 1) 9%,
-    rgba(235, 236, 239, 1) 30%
-  );
-}
 .app {
   display: flex;
   gap: 15.8rem;
@@ -37,3 +28,4 @@ a {
   text-decoration: none;
   color: var(--gray-500);
 }
+
