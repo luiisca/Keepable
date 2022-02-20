@@ -14,12 +14,10 @@
 
 .note-card .button--floating-top {
   position: absolute;
+  padding: 8px;
   top: 12px;
   right: 12px;
   z-index: 1;
-}
-.button--floating-top .material-icons-outlined {
-  font-size: 2.4rem; 
 }
 
 .note-card:hover {
@@ -59,4 +57,11 @@
 
   margin: 4px;
   margin-bottom: 0;
+}
+.note-card__buttons .button {
+  padding: 8px;
+}
+
+.note-card__buttons .material-icons-outlined {
+  font-size: 2rem;
 }

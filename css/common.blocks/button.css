@@ -1,6 +1,4 @@
 .button{
-  height: 32px;
-  width: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -23,8 +21,4 @@
 }
 .button:focus {
   border: 1px solid rgba(0,0,0,0.6);
-}
-
-.button .material-icons-outlined {
-  font-size: 1.8rem;
 }

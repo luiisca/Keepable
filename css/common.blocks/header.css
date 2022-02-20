@@ -1,0 +1,44 @@
+.header {
+  width: 97.5vw;
+  margin: 1.2rem auto;
+  border-radius: 11px;
+  padding: 1.6rem;
+  border: 1px solid var(--md-sys-color-outline);
+  box-shadow: aliceblue;
+  background-color: var(--md-ref-palette-neutral-variant-90);
+}
+.header__menu-button {
+  margin: 0 8px;
+  padding: 12px;
+}
+
+.logo-container {
+  margin-right: 9.6rem;
+  gap: 1.2rem;
+}
+.logo {
+  width: 4.8rem;
+}
+
+.header__search-bar {
+  background-color: var(--md-ref-palette-neutral-variant-90);
+
+  width: 80%;
+  padding: 1.2rem;
+  border-bottom: 0.75px solid var(--md-sys-color-outline);
+  border-right: 0.75px solid var(--md-sys-color-outline);
+
+  border-bottom-right-radius: 8px;
+  gap: 0.8rem;
+}
+
+.header__search-button {
+  padding: 8px;
+}
+
+.header__input {
+  background-color: var(--md-ref-palette-neutral-variant-90);
+  border: none;
+
+  line-height: 2.7rem;
+}

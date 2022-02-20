@@ -8,12 +8,16 @@
 
 @import url("common.blocks/button.css");
 @import url("common.blocks/nav-rail.css");
+@import url("common.blocks/header.css");
 
 @import url("blocks/nav-rail.css");
 @import url("blocks/button.css");
 
 @import url("blocks/note-card.css");
 
+body {
+  background-color: #fffbfa
+}
 .heading {
   font-family: 'Playfair Display', serif;
 }
