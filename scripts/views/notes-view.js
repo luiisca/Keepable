@@ -1,5 +1,5 @@
 const NotesView = (function () {
-  let rows = 0;
+  let rows = 1;
   const generateTemplate = () => `
     ${NoteForm}
     <div class="notes-container">
@@ -12,29 +12,46 @@ const NotesView = (function () {
     const notesContainer = document.querySelector(".notes-container");
     const notesContainerWidth = notesContainer.clientWidth;
 
-    const cards = document.querySelectorAll(".note-card");
+    const cards = Array.from(document.querySelectorAll(".note-card"));
     const cardsLength = cards.length;
     
     const columns = Math.floor(notesContainerWidth / cards[0].clientWidth);
-    const columnsIterable = new Array(columns).fill(0);
 
-    for (let i = 0; i < cardsLength; i++) {
+    
+    cards.forEach((note, i) => {
       const CARD_WIDTH = 256;
       const LABEL_CARD_DISTANCE = 8;
+      
+      const noteId = +note.dataset.id;
+      
+      const topperEls = cards.filter((el, i) => 
+        +el.dataset.id === noteId - i * columns
+      )
 
-      let x = i * CARD_WIDTH;
-      let y = LABEL_CARD_DISTANCE;
+      // console.log(topperEls.map(el => el.dataset.id), 'current element:', noteId);
+
+      let crrColumn = noteId - ((rows - 1) * columns);
+      // console.log(+note.dataset["id"]);
+
+      const calcX = (crrColumn) => (crrColumn - 1) * CARD_WIDTH;
+
+      let xAxis = calcX(crrColumn);
+      let yAxis = LABEL_CARD_DISTANCE;
       cards[i].style.transform = `translate(0px, 0px)`;
 
-      if (x + CARD_WIDTH < notesContainerWidth) {
-        cards[i].style.transform = `translate(${x}px, ${y}px)`;
+      if (xAxis + CARD_WIDTH < notesContainerWidth) {
+        console.log('crrColumn', crrColumn, 'x:', xAxis, 'noteid', noteId, 'columns', columns);
+
+        const x = calcX(crrColumn);
+        cards[i].style.transform = `translate(${x}px, ${yAxis}px)`;
       } else {
         rows++;
-        x = 
-        cards[i].style.transform = `translate(${x}px, ${y}px)`;
+        const x = calcX(crrColumn - columns);
+        console.log('crrColumn', crrColumn, 'x:', x, 'noteid', noteId, 'columns', columns);
+        cards[i].style.transform = `translate(${x}px, ${yAxis}px)`;
       }
-    }
-  };
+    });
+  }
 
   const listenWindow = () => {
     window.addEventListener("load", layoutNotes);
@@ -50,8 +67,8 @@ const NotesView = (function () {
     },
     addListeners() {
       NoteForm.addListeners();
-      // listenWindowResize();
-      // listenWindow();
+      listenWindowResize();
+      listenWindow();
     },
   };
 })();

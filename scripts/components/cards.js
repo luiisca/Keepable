@@ -1,7 +1,7 @@
 const Cards = (function () {
   const generateTemplate = () => Store.getNotes().map((note) => {
     return `
-    <div class="note-card">
+    <div class="note-card" data-id=${note.id}>
       <div class="note-card__img-cont">
         <img src="images/tmp-back.jpg" alt="">
       </div>
