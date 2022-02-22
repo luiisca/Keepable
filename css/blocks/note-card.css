@@ -1,15 +1,14 @@
 /* filled state*/
 .note-card {
   background-color: var(--md-sys-color-surface-variant);
-  /* color: var(--md-sys-color-on-surface-variant); */
   color: #202124;
   width: 240px;
-  /* margin: 0 auto; */
   border-radius: 9px; /* 12dp */
   overflow: hidden;
   padding-bottom: 4px;
 
   position: absolute;
+  transition: all .5s ease;
 }
 
 .note-card:hover {

@@ -1,5 +1,4 @@
 const NotesView = (function () {
-  let rows = 1;
   const generateTemplate = () => `
     ${NoteForm}
     <div class="notes-container">
@@ -8,47 +7,62 @@ const NotesView = (function () {
     </div>
   `;
 
+  const animateNote = (note, x, y) => {
+    note.animate([
+      { transform: `translate(${x}px, ${y}px)` }
+    ], {
+      duration: 369,
+      iterations: 1,
+    })
+  }
+
   const layoutNotes = () => {
+    let rows = 1;
+
+    const CARD_WIDTH = 256;
+    const Y_GAP = 16;
+    const LABEL_CARD_DISTANCE = 8;
+
     const notesContainer = document.querySelector(".notes-container");
     const notesContainerWidth = notesContainer.clientWidth;
 
     const cards = Array.from(document.querySelectorAll(".note-card"));
     const cardsLength = cards.length;
     
-    const columns = Math.floor(notesContainerWidth / cards[0].clientWidth);
+    const columns = Math.floor(notesContainerWidth / CARD_WIDTH);
 
     
     cards.forEach((note, i) => {
-      const CARD_WIDTH = 256;
-      const LABEL_CARD_DISTANCE = 8;
-      
       const noteId = +note.dataset.id;
-      
-      const topperEls = cards.filter((el, i) => 
-        +el.dataset.id === noteId - i * columns
-      )
 
-      // console.log(topperEls.map(el => el.dataset.id), 'current element:', noteId);
+      let crrUpperEl = noteId;
+      let upperEls = [];
+      while (crrUpperEl >= 0) {
+        crrUpperEl -= columns;
+        if (crrUpperEl <= 0) break;
+
+        upperEls.push(cards.find(el => +el.dataset.id == crrUpperEl)?.clientHeight);
+      }
 
       let crrColumn = noteId - ((rows - 1) * columns);
-      // console.log(+note.dataset["id"]);
 
       const calcX = (crrColumn) => (crrColumn - 1) * CARD_WIDTH;
 
       let xAxis = calcX(crrColumn);
-      let yAxis = LABEL_CARD_DISTANCE;
-      cards[i].style.transform = `translate(0px, 0px)`;
+      let yAxis = LABEL_CARD_DISTANCE + upperEls.reduce((acc, curr) => acc + curr, 0) + upperEls.length * Y_GAP;
+      note.style.transform = `translate(0px, 0px)`;
 
-      if (xAxis + CARD_WIDTH < notesContainerWidth) {
-        console.log('crrColumn', crrColumn, 'x:', xAxis, 'noteid', noteId, 'columns', columns);
-
+      if (xAxis + CARD_WIDTH <= notesContainerWidth) {
         const x = calcX(crrColumn);
-        cards[i].style.transform = `translate(${x}px, ${yAxis}px)`;
+
+        animateNote(note, x, yAxis);
+        note.style.transform = `translate(${x}px, ${yAxis}px)`;
       } else {
         rows++;
         const x = calcX(crrColumn - columns);
-        console.log('crrColumn', crrColumn, 'x:', x, 'noteid', noteId, 'columns', columns);
-        cards[i].style.transform = `translate(${x}px, ${yAxis}px)`;
+        
+        animateNote(note, x, yAxis);
+        note.style.transform = `translate(${x}px, ${yAxis}px)`;
       }
     });
   }
@@ -66,6 +80,7 @@ const NotesView = (function () {
       return generateTemplate();
     },
     addListeners() {
+      layoutNotes();
       NoteForm.addListeners();
       listenWindowResize();
       listenWindow();
