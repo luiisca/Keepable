@@ -1,5 +1,6 @@
 .nav-rail {
   width: clamp(250px, 10vw, 300px);
+  grid-column: 1;
   /* background-color: var(--md-sys-color-surface); */
 }
 
@@ -18,18 +19,23 @@
 .nav-rail__lnk,
 .nav-rail__lnk:link,
 .nav-rail__lnk:visited {
+  color: var(--md-sys-color-on-surface);
+  border: 0.75px solid transparent;
+
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
-  padding: .8rem 1.2rem;
-
+  
+  padding: 0.8rem 1.2rem;
   display: flex;
   align-items: center;
   gap: 3.2rem;
-  color: var(--md-sys-color-on-surface);
 }
 .nav-rail__lnk:hover,
 .nav-rail__lnk:active {
   background-color: #f1f3f4;
+}
+.nav-rail__lnk:focus {
+  border: 0.75px solid var(--md-sys-color-outline);
 }
 
 .nav-rail__lnk--active,

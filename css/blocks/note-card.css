@@ -3,13 +3,13 @@
   background-color: var(--md-sys-color-surface-variant);
   /* color: var(--md-sys-color-on-surface-variant); */
   color: #202124;
-  width: 400px;
-  margin: 0 auto;
+  width: 240px;
+  /* margin: 0 auto; */
   border-radius: 9px; /* 12dp */
   overflow: hidden;
   padding-bottom: 4px;
 
-  position: relative;
+  position: absolute;
 }
 
 .note-card:hover {

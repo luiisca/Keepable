@@ -1,8 +1,8 @@
 const TrashView = (function () {
   const template = `
     ${NoteForm}
-    <span>DELETED NOTES</span>
-    ${Card}
+    <span class="font-label font-label--small">DELETED NOTES</span>
+    ${Cards}
   `;
 
   return {

@@ -2,7 +2,7 @@ const NavRail = (function () {
   const template = `
   <aside class="nav-rail">
     <a href="#" class="nav-rail__lnk nav-rail__lnk--active nav-rail__notes" data-current=true>
-      <button class="nav-rail__button button">
+      <button tabindex="-1" class="nav-rail__button button">
         <span class="nav-rail__icon material-icons-outlined">
           book
         </span>
@@ -10,7 +10,7 @@ const NavRail = (function () {
       <p class="nav-rail__label font-title font-title--small">Notes</p>
     </a>
     <a href="#" class="nav-rail__lnk nav-rail__trash" data-current=false>
-      <button class="nav-rail__button button">
+      <button tabindex="-1"  class="nav-rail__button button">
         <span class="nav-rail__icon material-icons-outlined">
           delete
         </span>

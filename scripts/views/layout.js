@@ -1,8 +1,10 @@
 const Layout = (function () {
   const template = `
     ${Header}
-    ${NavRail}
-    <main class='js-main'></main>
+    <div class="content">
+      ${NavRail}
+      <main class='js-main'></main>
+    </div>
   `;
 
   return {

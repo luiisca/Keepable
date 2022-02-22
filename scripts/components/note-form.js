@@ -1,6 +1,6 @@
 const NoteForm = (function () {
   const template = `
-  <form class="note-form">
+  <form class="note-form mb-2">
     <input class="note-form__title font-title font-title--medium" type="text" placeholder="Title">
 
     <input class="note-form__content font-body font-body--medium" type="text" placeholder="Take a note...">
@@ -25,10 +25,25 @@ const NoteForm = (function () {
   </form>
   `;
 
+  listenSubmit = () => {
+    const noteForm = document.querySelector(".note-form");
+    noteForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const title = noteForm.querySelector(".note-form__title").value;
+      const content = noteForm.querySelector(".note-form__content").value;
+
+      Store.addNote(title, content);
+      Main.render(NotesView);
+    })
+  }
+
   return {
     toString() {
       return template;
     },
-    addListeners() {},
+    addListeners() {
+      listenSubmit();
+    },
   };
 })();
