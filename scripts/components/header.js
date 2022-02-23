@@ -26,3 +26,5 @@ const Header = (function () {
     addListeners() {},
   };
 })();
+
+export default Header;

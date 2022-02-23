@@ -14,3 +14,5 @@ const changeLinksState = (clickedLink) => {
   notesLink.dataset.current = clickedLink === 'notesLink' ? true : false;
   trashLink.dataset.current = clickedLink === 'trashLink' ? true : false;
 }
+
+export { evalTarget, changeLinksState };

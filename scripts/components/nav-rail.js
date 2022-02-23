@@ -1,3 +1,10 @@
+import NotesView from "../views/notes-view.js";
+import TrashView from "../views/trash-view.js";
+
+import { Main } from "../../index.js";
+import { evalTarget, changeLinksState } from "../utils.js";
+
+
 const NavRail = (function () {
   const template = `
   <aside class="nav-rail">
@@ -46,3 +53,5 @@ const NavRail = (function () {
     },
   };
 })();
+
+export default NavRail;

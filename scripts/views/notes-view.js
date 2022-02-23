@@ -1,3 +1,6 @@
+import Cards from "../components/cards.js";
+import NoteForm from "../components/note-form.js";
+
 const NotesView = (function () {
   const generateTemplate = () => `
     ${NoteForm}
@@ -87,3 +90,5 @@ const NotesView = (function () {
     },
   };
 })();
+
+export default NotesView;

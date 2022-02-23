@@ -1,3 +1,6 @@
+import Header from "../components/header.js";
+import NavRail from "../components/nav-rail.js";
+
 const Layout = (function () {
   const template = `
     ${Header}
@@ -16,3 +19,5 @@ const Layout = (function () {
     },
   };
 })();
+
+export default Layout;

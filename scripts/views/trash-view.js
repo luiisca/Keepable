@@ -1,3 +1,6 @@
+import Cards from "../components/cards.js";
+import NoteForm from "../components/note-form.js";
+
 const TrashView = (function () {
   const template = `
     ${NoteForm}
@@ -12,3 +15,5 @@ const TrashView = (function () {
     addListeners() {},
   };
 })();
+
+export default TrashView;

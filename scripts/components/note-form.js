@@ -1,3 +1,8 @@
+import Store from "../store.js";
+import NotesView from "../views/notes-view.js";
+
+import { Main } from "../../index.js";
+
 const NoteForm = (function () {
   const template = `
   <form class="note-form mb-2">
@@ -25,7 +30,7 @@ const NoteForm = (function () {
   </form>
   `;
 
-  listenSubmit = () => {
+  const listenSubmit = () => {
     const noteForm = document.querySelector(".note-form");
     noteForm.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -47,3 +52,5 @@ const NoteForm = (function () {
     },
   };
 })();
+
+export default NoteForm;

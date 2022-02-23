@@ -1,7 +1,7 @@
 const Store = (function() {
   let id = JSON.parse(localStorage.getItem('cards'))?.length || 0
   
-  const getNotes = () => JSON.parse(localStorage.getItem('cards')) || [];
+  const getNotes = () => JSON.parse(localStorage.getItem('cards')) || []
   const addNote = (title, content) => localStorage.setItem('cards', JSON.stringify([...getNotes('cards'), { title, content, id: ++id }]))
 
   return {
@@ -9,3 +9,5 @@ const Store = (function() {
     addNote,
   }
 })()
+
+export default Store;

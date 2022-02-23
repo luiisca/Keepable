@@ -1,3 +1,5 @@
+import Store from "../store.js";
+
 const Cards = (function () {
   const generateTemplate = () => Store.getNotes().map((note) => {
     return `
@@ -40,3 +42,5 @@ const Cards = (function () {
     addListeners() {},
   };
 })();
+
+export default Cards;

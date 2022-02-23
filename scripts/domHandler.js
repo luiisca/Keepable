@@ -10,3 +10,5 @@ function domHandler(parentSelector) {
     }
   }
 }
+
+export default domHandler;
