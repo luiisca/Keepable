@@ -1,5 +1,5 @@
 import Form from "../components/lib.js";
-import { getUser } from "../services.js";
+import { getUser, createUser } from "../services.js";
 
 const SignModal = (function() {
   const template = `
@@ -59,24 +59,46 @@ const SignModal = (function() {
     })
   }
 
-  const listeSubmit = function() {
+  const listenSubmit = function() {
     const signModal = document.querySelector('.sign-modal');
 
     signModal.addEventListener("submit", function(e) {
       e.preventDefault();
       const [ username, password ] = e.target.elements;
+      
+      // refactor repetitive code
+      if (e.target.dataset.type === "signin") {
+        const login = async () => {
+          try {
+            const userData = await getUser({ username: username.value, password: password.value })
+            .then((response) => response.json());
+            
+            console.log(userData);
 
-      const login = async () => {
-        try {
-          const userData = await getUser({ username: username.value, password: password.value })
-          .then((response) => response.json());
-
-          if (Array.isArray(userData)) throw new Error(userData)
-        } catch(error) {
-          console.error(error)
-        }
+            if (Array.isArray(userData)) throw new Error(userData)
+          } catch(error) {
+            console.error(error)
+          }
+        };
+        login();  
       }
-      login();
+
+      if (e.target.dataset.type === "signup") {
+        const signup = async () => {
+          try {
+            const userData = await createUser({ username: username.value, password: password.value })
+            .then((response) => response.json());
+  
+            console.log(userData);
+
+            if (Array.isArray(userData)) throw new Error(userData)
+          } catch(error) {
+            console.error(error)
+          }
+        };
+        signup();
+      }
+
     })
   }
 
@@ -86,7 +108,7 @@ const SignModal = (function() {
     },
     addListeners() {
       listenClick();
-      listeSubmit();
+      listenSubmit();
     },
   }
 })()

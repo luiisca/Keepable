@@ -1,5 +1,5 @@
 const Form = (type) => `
-    <form class="sign-form">
+    <form class="sign-form" data-type="${type}">
       <div class="form-item">
         <div class="form-item-label font-title font-title--small">
           Email
