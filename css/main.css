@@ -9,6 +9,9 @@
 @import url("common.blocks/button.css");
 @import url("common.blocks/nav-rail.css");
 @import url("common.blocks/header.css");
+@import url("common.blocks/profile.css");
+@import url("common.blocks/form.css");
+@import url("common.blocks/sign-modal.css");
 
 @import url("blocks/button.css");
 @import url("blocks/note-form.css");

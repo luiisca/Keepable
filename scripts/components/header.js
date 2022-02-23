@@ -1,3 +1,5 @@
+import Profile from "./profile.js";
+
 const Header = (function () {
   const template = `
   <header class="header flex mb-2">
@@ -16,6 +18,8 @@ const Header = (function () {
       </button>
       <input class="header__input font-title font-title--medium" type="text" placeholder="Search" />
     </form>
+
+    ${Profile}
   </header>
   `;
 
@@ -23,7 +27,9 @@ const Header = (function () {
     toString() {
       return template;
     },
-    addListeners() {},
+    addListeners() {
+      Profile.addListeners();
+    },
   };
 })();
 

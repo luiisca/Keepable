@@ -1,0 +1,52 @@
+.overlay {
+  visibility: hidden;
+
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  background: rgba(240, 226, 232, 0.4);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.overlay--visible {
+  visibility: visible;
+}
+
+.sign-modal {
+  visibility: hidden;
+  transform: translateX(100vw);
+
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  z-index: 9999;
+  padding: 1.6rem;
+}
+.sign-modal--visible {
+  visibility: visible;
+  transform: translate(-50%, -50%);
+}
+
+.sign-modal__content {
+
+}
+.sign-modal__close-button {
+
+}
+.sign-modal__title {
+
+}
+.sign-modal__content-container {
+
+}
+
+.sign-form {
+
+}

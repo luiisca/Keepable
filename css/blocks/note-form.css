@@ -1,3 +1,5 @@
+/* Make note-form a generic class block */
+/* note-form should be a modification of a form common block especific for this project */
 .note-form {
   position: relative;
 

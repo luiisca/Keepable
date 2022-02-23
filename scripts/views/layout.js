@@ -16,6 +16,7 @@ const Layout = (function () {
     },
     addListeners() {
       NavRail.addListeners();
+      Header.addListeners();
     },
   };
 })();

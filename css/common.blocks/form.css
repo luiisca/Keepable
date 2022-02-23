@@ -1,0 +1,22 @@
+.form {
+  background-color: white;
+  box-shadow: 0px 1px 2px 0px var(--md-sys-color-shadow);
+  padding: 4px 8px;
+  border-radius: 9px;
+}
+.form:hover {
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+}
+.form-item {
+
+}
+.form-item-label {
+
+}
+.form-item-input {
+
+}
+.form-item-button {
+
+}
+

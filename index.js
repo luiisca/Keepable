@@ -8,4 +8,4 @@ App.render(Layout);
 const Main = domHandler(".js-main");
 Main.render(NotesView);
 
-export { Main };
+export { Main, App };

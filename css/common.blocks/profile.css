@@ -1,0 +1,48 @@
+.profile-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* overflow: hidden; */
+}
+.profile-button {
+
+}
+.profile-icon {
+
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 1s ease;
+}
+.dropdown {
+
+}
+.dropdown--visible {
+  opacity: 1;
+  visibility: visible;
+}
+.profile-dropdown-content {
+
+}
+.profile-dropdown-item {
+
+}
+.profile-dropdown-link {
+
+}
+.profile-dropdown-icon {
+
+}
+.profile-dropdown-text {
+
+}
