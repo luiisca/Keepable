@@ -1,5 +1,6 @@
 .overlay {
   visibility: hidden;
+  transform: translateX(100vw);
 
   position: absolute;
   width: 100vw;
@@ -17,6 +18,7 @@
 }
 .overlay--visible {
   visibility: visible;
+  transform: translateX(0);
 }
 
 .sign-modal {

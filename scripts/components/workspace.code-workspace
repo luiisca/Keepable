@@ -1,16 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "../../../.."
-		},
-		{
-			"path": "../../../../../../courses/JavaScript-Udemy"
-		}
-	],
-	"settings": {
-		"workbench.preferredDarkColorTheme": "Monokai Pro",
-		"workbench.colorTheme": "Monokai Pro",
-		"liveServer.settings.multiRootWorkspaceName": "javascript",
-		"liveServer.settings.CustomBrowser": "chrome"
-	}
+  "folders": [
+    {
+      "path": "../../../.."
+    }
+  ]
 }

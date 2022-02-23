@@ -1,4 +1,4 @@
-import SignModal from "./sign-modal.js";
+import SignModal from "../views/sign-modal.js";
 
 const Profile = (function() {
   const template = `
